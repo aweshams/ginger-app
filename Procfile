@@ -1,1 +1,1 @@
-web: gunicorn ginger_app --log-file -
+web: gunicorn ginger_app.wsgi 0.0.0.0:$PORT
