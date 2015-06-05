@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
+import psycopg2
 from django.conf import settings
 
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -99,6 +100,7 @@ DATABASES['default'] =  dj_database_url.config()
 
 # Enable Connection Pooling
 DATABASES['default']['ENGINE'] = 'django_postgrespool'
+DATABASES['default']['NAME'] = 'foodtruck.db'
 
 FACEBOOK_ACCESS_TOKEN = '877132399012347|ZtY0Y32AEuWtPKO8YJ2wbNZ5iaU'
 
