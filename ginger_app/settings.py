@@ -100,7 +100,7 @@ DATABASES['default'] =  dj_database_url.config()
 
 # Enable Connection Pooling
 DATABASES['default']['ENGINE'] = 'django_postgrespool'
-DATABASES['default']['NAME'] = 'foodtruck.db'
+DATABASES['default']['NAME'] = os.path.join(BASE_DIR, 'foodtruck.db')
 
 FACEBOOK_ACCESS_TOKEN = '877132399012347|ZtY0Y32AEuWtPKO8YJ2wbNZ5iaU'
 
