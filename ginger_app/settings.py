@@ -14,6 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
+from django.conf import settings
 
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -87,12 +88,13 @@ WSGI_APPLICATION = 'ginger_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'foodtruck.db'),
     }
-}
+}'''
+DATABASES = settings.DATABASES
 DATABASES['default'] =  dj_database_url.config()
 
 # Enable Connection Pooling
