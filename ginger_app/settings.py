@@ -89,18 +89,18 @@ WSGI_APPLICATION = 'ginger_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'foodtruck.db'),
     }
-}'''
-DATABASES = settings.DATABASES
+}
+'''DATABASES = settings.DATABASES
 DATABASES['default'] =  dj_database_url.config()
 
 # Enable Connection Pooling
 DATABASES['default']['ENGINE'] = 'django_postgrespool'
-DATABASES['default']['NAME'] = 'foodtruck.db'
+DATABASES['default']['NAME'] = 'foodtruck.db'''
 
 FACEBOOK_ACCESS_TOKEN = '877132399012347|ZtY0Y32AEuWtPKO8YJ2wbNZ5iaU'
 
