@@ -1,1 +1,1 @@
-web: gunicorn ginger_app.wsgi --log-file -
+web: gunicorn ginger_app --log-file -
