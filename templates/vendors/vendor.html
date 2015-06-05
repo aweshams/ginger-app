@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{block.super}}{% endblock %}
+
+{% block main_content %}
+    {% if vendor %}
+	<br>
+	<table class="table">
+	<th>Vendor</th>
+	<th>Appearances in the last month</th>
+        {% for vendor in vendor %}
+		<tr>
+            <td>{{vendor}}</td><td>{{count}}</td>
+		</tr>
+        {% endfor %}
+	</ul>
+    {% else %}
+        <p>No events for the last 30 days.</p>
+    {% endif %}
+            
+{% endblock %}

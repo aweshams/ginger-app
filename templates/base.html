@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html>
+  <head>
+    <title>{% block title %}GINGER IO APP{% endblock %}</title>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cloud.webtype.com/css/d9345300-2100-4d13-8664-2bbd21b72851.css" rel="stylesheet" type="text/css">
+    {% block extra_head %}{% endblock %}
+	
+  </head>
+  <body class="landing">
+    {% block main_content %} {% endblock %}
+    {% block extra_body %} {% endblock %}
+  </body>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</html>
+

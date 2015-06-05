@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{{block.super}}{% endblock %}
+
+{% block main_content %}
+    {% if foodtrucks %}
+	<h1>LIST OF Vendors!</h1>
+	<br>
+	<table class="table">
+	<th>Vendors</th>
+	<th>Appearances in the last month</th>
+        {% for foodtruck in foodtrucks %}
+		<tr>
+            <td><a class="" href='/{{foodtruck.id}}/vendor'>{{foodtruck.name}}</a></td><td>{{foodtruck.vendor_count}}</td>
+		</tr>
+        {% endfor %}
+	</ul>
+    {% else %}
+        <p>No food trucks for the last 30 days.</p>
+    {% endif %}
+{% endblock %}

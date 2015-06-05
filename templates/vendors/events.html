@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{block.super}}{% endblock %}
+
+{% block main_content %}
+    {% if events %}
+	<h1>LIST OF EVENTS!</h1>
+	<br>
+	<ul class="">
+        {% for event in events %}
+            <li><a class="" href="/{{event.location}}">{{event.name}}</a></li>
+        {% endfor %}
+		</ul>
+    {% else %}
+        <p>No events for the last 30 days.</p>
+    {% endif %}
+{% endblock %}

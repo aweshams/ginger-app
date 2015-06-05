@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{block.super}}{% endblock %}
+
+{% block main_content %}
+  
+    <div class="container">
+		<h1>Welcome!</h1>
+    <div class="row">
+		<h2><a class="btn btn-default btn-lg" href='/events/'>Events</a></h2>
+    </div>
+    <div class="row">
+	<h2><a class="btn btn-default btn-lg" href='/foodtrucks/'>Recent Vendors</a></h2>
+    </div>
+  </div>
+{% endblock %}

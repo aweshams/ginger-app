@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{block.super}}{% endblock %}
+
+{% block main_content %}
+    {% if vendors %}
+	<h1>The event vendors are!</h1>
+	<br>
+	<ul class="">
+        {% for vendor in vendors %}
+            <li><a class="" href='/{{vendor.id}}/vendor' >{{vendor}}</a></li>
+        {% endfor %}
+	</ul>
+    {% else %}
+        <p>This event has no vendors.</p>
+    {% endif %}
+{% endblock %}
