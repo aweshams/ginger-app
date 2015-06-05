@@ -12,8 +12,7 @@ from food.facebook_api import FacebookAPI
 
 #Home View
 def index(request):
-	update_foodtrucks(request)
-	update_foodtrucks(request)
+	#update_foodtrucks(request)
 	t = loader.get_template('vendors/home.html')
 	c = Context({})
 	return HttpResponse(t.render(c))
