@@ -21,7 +21,7 @@ application = get_wsgi_application()
 #application = DjangoWhiteNoise(application)
 #import os
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ginger_app")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ginger_app.settings")
 #from django.core.wsgi import get_wsgi_application
 
 try:
